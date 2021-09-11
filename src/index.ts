@@ -4,5 +4,5 @@ import chalk from "chalk";
 import figlet from "figlet";
 
 console.log(
-  chalk.red(figlet.textSync("pizza-cli", { horizontalLayout: "full" }))
+  chalk.red(figlet.textSync("cryptodex", { horizontalLayout: "full" }))
 );
