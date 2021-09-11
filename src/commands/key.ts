@@ -1,8 +1,11 @@
 import inquirer from "inquirer";
-import colors from "colors";
+import chalk from "chalk";
 
 import validation from "../utils/validation";
 import KeyManager from "../lib/KeyManager";
+
+// tslint:disable-next-line: no-console
+const log = console.log;
 
 const key = {
   async set() {
@@ -11,20 +14,36 @@ const key = {
       {
         type: "input",
         name: "key",
-        message: "Enter API Key".green + "https://nomics.com",
+        message: "Enter API Key https://nomics.com",
         validate: validation.isRequired,
       },
     ]);
+    // tslint:disable-next-line: no-shadowed-variable
     const key = keyManager.setKey(input.key);
     if (key) {
-      console.log("API Key set".blue);
+      log(chalk.blue("API Key is set"));
     }
   },
   show() {
-    console.log("hello from show");
+    try {
+      const keyManager = new KeyManager();
+      // tslint:disable-next-line: no-shadowed-variable
+      const key = keyManager.getKey();
+      log("Current API Key: ", chalk.green(key));
+      return key;
+    } catch (e: any) {
+      log(chalk.red(e.message));
+    }
   },
   remove() {
-    console.log("hello from remove");
+    try {
+      const keyManager = new KeyManager();
+      keyManager.deleteKey();
+      log(chalk.blue("Key Removed"));
+      return;
+    } catch (e: any) {
+      log(chalk.red(e.message));
+    }
   },
 };
 

@@ -1,6 +1,6 @@
 declare const key: {
-    set(): void;
-    show(): void;
+    set(): Promise<void>;
+    show(): any;
     remove(): void;
 };
 export default key;

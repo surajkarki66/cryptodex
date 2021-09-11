@@ -1,10 +1,9 @@
 import Configstore from "configstore";
-import pkg from "../../package.json";
 
 class KeyManager {
   private conf;
   constructor() {
-    this.conf = new Configstore(pkg.name);
+    this.conf = new Configstore("cryptodex");
   }
 
   setKey(key: string) {

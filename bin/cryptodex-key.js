@@ -3,8 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var commander_1 = require("commander");
-var key_1 = __importDefault(require("./commands/key"));
+const commander_1 = require("commander");
+const key_1 = __importDefault(require("./commands/key"));
 commander_1.program
     .command("set")
     .description("Set API Key -- Get at https://nomics.com")
