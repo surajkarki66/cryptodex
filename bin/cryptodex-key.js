@@ -1,14 +1,13 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const commander_1 = require("commander");
-const key_1 = __importDefault(require("./commands/key"));
-commander_1.program
+import { program } from "commander";
+import key from "./commands/key.js";
+program
     .command("set")
     .description("Set API Key -- Get at https://nomics.com")
-    .action(key_1.default.set);
-commander_1.program.command("show").description("Show API Key").action(key_1.default.show);
-commander_1.program.command("remove").description("Remove API Key").action(key_1.default.remove);
-commander_1.program.parse(process.argv);
+    .action(key.set);
+program.command("show").description("Show API Key").action(key.show);
+program.command("remove").description("Remove API Key").action(key.remove);
+program.parse(process.argv);
+// If no args, output help
+if (!process.argv[2]) {
+    program.outputHelp();
+}

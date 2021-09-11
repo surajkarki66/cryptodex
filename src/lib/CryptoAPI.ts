@@ -1,6 +1,7 @@
 import axios from "axios";
+import chalk from "chalk";
 
-import { ICoin } from "../types/coin";
+import { ICoin } from "../types/coin.js";
 
 class CryptoAPI {
   private apiKey;
@@ -21,9 +22,21 @@ class CryptoAPI {
       );
       let output = "";
       res.data.forEach((coin: ICoin) => {
-        output += `Coin: ${coin.symbol} (${
-          coin.name
-        }) | Price: ${formatter.format(coin.price)} | Rank: ${coin.rank}\n`;
+        output +=
+          `Coin:` +
+          chalk.blue(` ${coin.name}`) +
+          ` (${coin.symbol})` +
+          ` |` +
+          ` Price:` +
+          chalk.green(` ${formatter.format(coin.price)}`) +
+          ` |` +
+          ` Market CAP:` +
+          chalk.green(` ${formatter.format(coin.market_cap)}`) +
+          ` |` +
+          ` Rank:` +
+          chalk.yellow(` ${coin.rank}`) +
+          `\n` +
+          `\n`;
       });
 
       return output;
@@ -41,3 +54,5 @@ function handleAPIError(err: any) {
     throw new Error("Something is not working");
   }
 }
+
+export default CryptoAPI;

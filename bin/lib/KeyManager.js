@@ -1,12 +1,8 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const configstore_1 = __importDefault(require("configstore"));
+import Configstore from "configstore";
 class KeyManager {
+    conf;
     constructor() {
-        this.conf = new configstore_1.default("cryptodex");
+        this.conf = new Configstore("cryptodex");
     }
     setKey(key) {
         this.conf.set("apiKey", key);
@@ -28,4 +24,4 @@ class KeyManager {
         return;
     }
 }
-exports.default = KeyManager;
+export default KeyManager;

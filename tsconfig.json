@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "lib": ["es6", "es2015", "dom"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["es6", "es2015", "ESNext"],
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "outDir": "bin",
-    "rootDir": "src",
+    "outDir": "./bin",
     "strict": true,
     "types": ["node"],
     "esModuleInterop": true,
-    "resolveJsonModule": true
-  }
+    "moduleResolution": "node",
+  },
+  "include": [
+    "./src"
+  ]
 }

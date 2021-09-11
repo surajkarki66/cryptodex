@@ -2,13 +2,13 @@
   "name": "cryptodex",
   "version": "1.0.0",
   "main": "./bin/cryptodex.js",
+  "type": "module",
   "repository": "https://github.com/surajkarki66/cryptodex.git",
   "author": "surajkarki66 <suraj.karki500@protonmail.com>",
   "bin": {
     "cryptodex": "./bin/cryptodex.js"
   },
   "scripts": {
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/cryptodex.ts",
     "build": "rm -rf bin/ && tsc -p tsconfig.json",
     "local": "doas npm uninstall -g && doas npm install -g"
   },
@@ -17,8 +17,9 @@
     "chalk": "^4.1.2",
     "colors": "^1.4.0",
     "commander": "^8.2.0",
-    "configstore": "^5.0.1",
-    "inquirer": "^8.1.2"
+    "configstore": "^6.0.0",
+    "inquirer": "^8.1.2",
+    "ora": "^6.0.0"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
@@ -26,8 +27,6 @@
     "@types/configstore": "^5.0.1",
     "@types/inquirer": "^8.1.1",
     "@types/node": "^16.9.1",
-    "nodemon": "^2.0.12",
-    "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   }
 }

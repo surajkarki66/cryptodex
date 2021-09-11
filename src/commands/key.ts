@@ -1,11 +1,9 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
-import validation from "../utils/validation";
-import KeyManager from "../lib/KeyManager";
-
-// tslint:disable-next-line: no-console
-const log = console.log;
+import { log } from "../utils/logger.js";
+import validation from "../utils/validation.js";
+import KeyManager from "../lib/KeyManager.js";
 
 const key = {
   async set() {
