@@ -24,6 +24,7 @@
   "devDependencies": {
     "@types/clear": "^0.1.2",
     "@types/commander": "^2.12.2",
+    "@types/configstore": "^5.0.1",
     "@types/figlet": "^1.5.4",
     "@types/node": "^16.9.1",
     "nodemon": "^2.0.12",

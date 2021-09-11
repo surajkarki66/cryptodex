@@ -5,6 +5,8 @@ import { program } from "commander";
 import chalk from "chalk";
 import figlet from "figlet";
 
+import pkg from "../package.json";
+
 clear();
 // tslint:disable-next-line: no-console
 console.log(
@@ -12,6 +14,6 @@ console.log(
 );
 
 program
-  .version("1.0.0")
+  .version(pkg.version)
   .command("key", "Manage API Key -- https://nomics.com")
   .parse(process.argv);
