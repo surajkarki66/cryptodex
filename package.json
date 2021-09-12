@@ -1,11 +1,11 @@
 {
   "name": "cryptodex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./bin/cryptodex.js",
   "type": "module",
   "repository": "https://github.com/surajkarki66/cryptodex.git",
   "author": "surajkarki66 <suraj.karki500@protonmail.com>",
-  "license": "GPLv3",
+  "license": "GPL-3.0",
   "bin": {
     "cryptodex": "./bin/cryptodex.js"
   },
