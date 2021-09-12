@@ -5,6 +5,7 @@
   "type": "module",
   "repository": "https://github.com/surajkarki66/cryptodex.git",
   "author": "surajkarki66 <suraj.karki500@protonmail.com>",
+  "license": "GPLv3",
   "bin": {
     "cryptodex": "./bin/cryptodex.js"
   },
@@ -15,7 +16,6 @@
   "dependencies": {
     "axios": "^0.21.4",
     "chalk": "^4.1.2",
-    "colors": "^1.4.0",
     "commander": "^8.2.0",
     "configstore": "^6.0.0",
     "inquirer": "^8.1.2",
@@ -28,5 +28,12 @@
     "@types/inquirer": "^8.1.1",
     "@types/node": "^16.9.1",
     "typescript": "^4.4.3"
-  }
+  },
+  "keywords": [
+    "cryptodex",
+    "USD",
+    "BTC",
+    "cur",
+    "price"
+  ]
 }
