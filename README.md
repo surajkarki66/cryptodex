@@ -49,6 +49,7 @@ Display version
 Below are some examples of cryptodex usage.
 
 - Set API Key:
+  To set API Key go to https://p.nomics.com/pricing# and get the key
 
 ```bash
   $ cryptodex key set
