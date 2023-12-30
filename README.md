@@ -7,27 +7,27 @@ A CLI based application built with Typescript to check the pricing of crypto coi
 ### Using npm
 
 ```bash
-  $ npm i cryptodex -g
+   npm i cryptodex -g
 ```
 
 ### Using yarn
 
 ```bash
-  $ yarn add cryptodex -g
+   yarn add cryptodex -g
 ```
 
 ### Manual
 
 ```bash
-  $ git clone https://github.com/surajkarki66/cryptodex.git
-  $ yarn run build
-  $ yarn run local
+   git clone https://github.com/surajkarki66/cryptodex.git
+   yarn run build
+   yarn run local
 ```
 
 ## Usage
 
 ```bash
-  $ cryptodex [Commands] [Options]
+   cryptodex [Commands] [Options]
 ```
 
 **Options**
@@ -41,7 +41,7 @@ Display version
 ## Help
 
 ```bash
-  $ cryptodex --help
+   cryptodex --help
 ```
 
 ## Examples
@@ -52,7 +52,7 @@ Below are some examples of cryptodex usage.
   To set API Key go to https://p.nomics.com/pricing# and get the key
 
 ```bash
-  $ cryptodex key set
+   cryptodex key set
 ```
 
 API Key is set
@@ -60,7 +60,7 @@ API Key is set
 - Show API Key
 
 ```bash
-  $ cryptodex key show
+   cryptodex key show
 ```
 
 Current API Key: a14e9088578e1e1asdkflsakfdlks
@@ -68,7 +68,7 @@ Current API Key: a14e9088578e1e1asdkflsakfdlks
 - Check bitcoin price in USD
 
 ```bash
-  $ cryptodex check price --coin=BTC --cur=USD
+   cryptodex check price --coin=BTC --cur=USD
 ```
 
 ✔ All done check current rates!
